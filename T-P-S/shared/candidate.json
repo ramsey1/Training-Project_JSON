@@ -1,0 +1,26 @@
+[
+    {
+        "fullName": "Mukul Verma",
+        "email": "mklvrm262@gmail.com",
+        "mobile": "9871252265",
+        "password": "default",
+        "experience": {
+            "year": 1,
+            "month": 1
+        },
+        "resume": "resume.pdf",
+        "video": "intro.mp4"
+    },
+    {
+        "fullName": "Aman Tandon",
+        "email": "aman@gmail.com",
+        "mobile": "9876543219",
+        "password": "default",
+        "experience": {
+            "year": 2,
+            "month": 0
+        },
+        "resume": "resume.pdf",
+        "video": "intro.mp4"
+    }
+]

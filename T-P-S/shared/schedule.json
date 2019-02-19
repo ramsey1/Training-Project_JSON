@@ -1,0 +1,20 @@
+[
+    {
+        "interviewerName": "Vineet",
+        "candidateName": "Mukul Verma",
+        "interviewerEmail": "vineet@gmail.com",
+        "candidateEmail": "mklvrm262@gmail.com",
+        "date": "2019-02-23",
+        "time": "01:00",
+        "marks": 9
+    },
+    {
+        "interviewerName": "Amrit",
+        "candidateName": "Aman Tandon",
+        "interviewerEmail": "amrit@gmail.com",
+        "candidateEmail": "aman@gmail.com",
+        "date": "2019-02-23",
+        "time": "12:00",
+        "marks": 1
+    }
+]

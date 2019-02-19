@@ -1,0 +1,16 @@
+[
+    {
+        "candidateName": "Mukul Verma",
+        "date": "2019-02-23",
+        "time": "01:00",
+        "interviewerName": "Vineet",
+        "marks": 9
+    },
+    {
+        "candidateName": "Aman Tandon",
+        "date": "2019-02-23",
+        "time": "12:00",
+        "interviewerName": "Amrit",
+        "marks": 1
+    }
+]

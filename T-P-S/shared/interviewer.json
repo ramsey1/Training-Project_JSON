@@ -1,0 +1,14 @@
+[
+    {
+        "fullName": "Vineet",
+        "email": "vineet@gmail.com",
+        "password": "vineet",
+        "role": "Technical Interviewer"
+    },
+    {
+        "fullName": "Amrit",
+        "email": "amrit@gmail.com",
+        "password": "amrita",
+        "role": "Technical Interviewer"
+    }
+]
