@@ -1,0 +1,15 @@
+<div id="mySidenav" class="sidenav mt-5">
+  <a  class="closebtn" (click)="closeNav()">&times;</a>
+  <a [routerLink]="['/admin-homepage/add-interviewer']">Add Interviewer</a>
+  <a [routerLink]="['/admin-homepage/assign-interviewer']">Assign Interviewer</a>
+  <a [routerLink]="['/admin-homepage/interview-status']">Interview Status</a>
+  <a [routerLink]="['/admin-homepage/candidate-details']">Candidate Details</a>
+</div>
+<div class="mt-2">
+
+  <div [hidden]="textShow">
+  <h2>Welcome. Click open for more options</h2>
+</div>
+  <span style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776; open</span>
+  <router-outlet></router-outlet>
+</div>

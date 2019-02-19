@@ -1,0 +1,29 @@
+<div class="container-fluid status-table">
+  <div class="col-12">
+    <div class="margin">
+    <table class="table table-bordered table-responsive-lg table-active table-hover table-info">
+      <thead>
+        <tr>
+          <th>Candidate</th>
+          <th>Interviewer</th>
+          <th>Date</th>
+          <th>Time</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let status of schedule">
+          <td>{{status.candidateName}}</td>
+          <td>{{status.interviewerName}}</td>
+          <td>{{status.date}}</td>
+          <td>{{status.time}}</td>
+          <td *ngIf="status.marks>5" style="color:green">Accept</td>
+          <td *ngIf="status.marks<5&&status.marks!=''" style="color:red">Reject</td>
+          <td *ngIf="status.marks==''" style="color:blue">Pending</td>
+        </tr>
+      </tbody>
+    </table>
+    
+  </div>
+  </div>
+</div>

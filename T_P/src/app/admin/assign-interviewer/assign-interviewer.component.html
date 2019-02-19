@@ -1,0 +1,48 @@
+<div class="container border border-secondary rounded h-100 w-100">
+  <div class="row mx-auto mr-5">
+    <div class="col-12">
+      <h1>Assign Interviewer</h1>
+      <br>
+      <form [formGroup]="assignInterviewer" (ngSubmit)="onSubmit()">
+
+        <div class="form-group">
+          <label for="candidate">Select Candidate:</label>
+          <select class="form-control" formControlName="candidateName">
+            <option [value]="candidate.fullName" *ngFor="let candidate of candidates" >
+              {{candidate.fullName}}
+            </option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="interviewer">Select Interviewer:</label>
+          <select class="form-control" formControlName="interviewerName">
+            <option [value]="interviewer.fullName" *ngFor="let interviewer of interviewers" >
+              {{interviewer.fullName}}
+            </option>
+          </select>
+        </div>
+
+        
+
+        <div class="form-group">
+          <label for="role">Schedule:</label>
+          <div class="clearfix">
+            <div class="form-group col-6 float-left">
+              <label>Choose Date</label>
+              <input class="form-control calendar" type="date" formControlName="date">
+            </div>
+            <div class=" form-group col-6 float-right">
+              <label>Choose Time </label>
+              <input class="form-control clock" type="time" formControlName="time">
+            </div>
+          </div>
+        </div>
+
+        <div class="form-group text-center">
+          <button type="submit" [disabled]="!assignInterviewer.valid" class="btn btn-success mt-2 mb-2 ">Submit</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

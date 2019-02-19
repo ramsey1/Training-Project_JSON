@@ -1,0 +1,11 @@
+.margin{
+    margin-left: 220px;
+}
+th{
+    background-color: #696969;
+    color: black;
+}
+
+table{
+    box-shadow: 10px 5px 5px #696969; 
+}

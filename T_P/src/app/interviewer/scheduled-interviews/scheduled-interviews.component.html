@@ -1,0 +1,36 @@
+<div *ngIf="success" class="mt-4">
+  <div class="container table-responsive">
+    <h2 class="middle">Hi {{interviewerName}}!</h2>
+    <table class="table table-bordered table-responsive-lg table-active table-hover table-info">
+
+      <th>Candidate Name</th>
+      <th>Scheduled Time</th>
+      <th>FeedBack</th>
+      <th>Resume</th>
+      <th>Intro video</th>
+      <th>Submit</th>
+      <tr *ngFor="let mapped of resList">
+        <td>{{mapped.candidateName}}</td>
+        <td>{{mapped.date}} {{mapped.time}}</td>
+        <td><input type="number" [(ngModel)]="mapped.marks" class="marks" min="1" max="10" required>/10</td>
+        <td><button class="btn btn-info" (click)="resume(mapped.candidateName)">Resume</button></td>
+        <td><button class="btn btn-info" (click)="intro(mapped.candidateName)">Video</button></td>
+        <td><button class="btn btn-primary" (click)="feedback()">submit</button></td>
+      </tr>
+    </table>
+    <div *ngIf='resPath!=null'>
+      <h3>Resume</h3>
+      <iframe [src]="resPath | safe" frameborder="0" width="75%" height="900px"></iframe>
+    </div>
+
+    <div class="video center" *ngIf='vidPath!=null'>
+      <h3>Intro video</h3>
+      <video controls (click)="toggleVideo()" id="videoPlayer" width="75%" height="75%">
+        <source src="{{vidPath}}" type="video/mp4" />
+        Browser not supported
+      </video>
+
+    </div>
+
+  </div>
+</div>

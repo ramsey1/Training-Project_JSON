@@ -1,0 +1,32 @@
+<p>
+  candidate-details works!
+</p>
+<div class="container-fluid status-table">
+  <div class="col-12">
+    <div class="margin">
+      <table class="table table-bordered table-responsive-lg table-active table-hover table-info">
+        <th>Candidate Name</th>
+        <th>Resume</th>
+        <th>Intro video</th>
+        <tr *ngFor="let candidate of candidates">
+          <td>{{candidate.fullName}}</td>
+          <td><button class="btn btn-info" (click)="resume(candidate.fullName)">Resume</button></td>
+          <td><button class="btn btn-info" (click)="intro(candidate.fullName)">Video</button></td>
+        </tr>
+      </table>
+
+<div *ngIf='resPath!=null'>
+    <h3>Resume</h3>
+    <iframe [src]="resPath | resume" frameborder="0" width="75%" height="900px"></iframe>
+</div>
+
+<div class="video center" *ngIf='vidPath!=null'>
+  <h3>Intro video</h3>
+  <video controls (click)="toggleVideo()" id="videoPlayer" width="75%" height="75%">
+    <source src="{{vidPath}}" type="video/mp4" />
+    Browser not supported
+  </video>
+</div>
+    </div>
+  </div>
+</div>

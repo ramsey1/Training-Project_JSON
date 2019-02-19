@@ -1,0 +1,18 @@
+<div class="container mt-4">
+  <div class="row">
+    <div class="col-12">
+      <h2>Hi {{name | uppercase}}!</h2>
+    </div>
+    <div class="col-12 center mt-5 border border-secondary rounded" id="status">
+      <div [hidden]="!msg">
+        <h2>Congratulations!</h2>
+      </div>
+    <div class="center"> 
+      <h3>Your Status is : <span class="status">{{istatus}}</span></h3>
+    </div> 
+    <div [hidden]="!pend">
+      <h2>We are sorry!.Better Luck next time</h2>
+    </div>
+    </div>
+  </div>
+</div>
